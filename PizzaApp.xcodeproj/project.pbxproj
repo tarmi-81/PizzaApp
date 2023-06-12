@@ -9,21 +9,82 @@
 /* Begin PBXBuildFile section */
 		8429CA2A2A3390C400BA3C0A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8429CA292A3390C400BA3C0A /* AppDelegate.swift */; };
 		8429CA2C2A3390C400BA3C0A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8429CA2B2A3390C400BA3C0A /* SceneDelegate.swift */; };
-		8429CA2E2A3390C400BA3C0A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8429CA2D2A3390C400BA3C0A /* ViewController.swift */; };
-		8429CA312A3390C400BA3C0A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8429CA2F2A3390C400BA3C0A /* Main.storyboard */; };
 		8429CA332A3390C600BA3C0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8429CA322A3390C600BA3C0A /* Assets.xcassets */; };
-		8429CA362A3390C600BA3C0A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8429CA342A3390C600BA3C0A /* LaunchScreen.storyboard */; };
+		8429CA422A33948D00BA3C0A /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8429CA412A33948D00BA3C0A /* NetworkManager.swift */; };
+		8429CA4D2A339B3400BA3C0A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8429CA4C2A339B3400BA3C0A /* Constants.swift */; };
+		8429CA502A33A95100BA3C0A /* IngredientItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8429CA4F2A33A95100BA3C0A /* IngredientItem.swift */; };
+		8429CA522A33AA9400BA3C0A /* Pizzas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8429CA512A33AA9400BA3C0A /* Pizzas.swift */; };
+		8429CA542A33AC7600BA3C0A /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8429CA532A33AC7600BA3C0A /* HomeScreenViewController.swift */; };
+		8429CA562A33CD5100BA3C0A /* UIImageView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8429CA552A33CD5100BA3C0A /* UIImageView+extension.swift */; };
+		8429CA592A34498600BA3C0A /* PizzaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8429CA582A34498600BA3C0A /* PizzaTableViewCell.swift */; };
+		8429CA5B2A344C7500BA3C0A /* UIView+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8429CA5A2A344C7500BA3C0A /* UIView+extensions.swift */; };
+		8429CA5E2A34610000BA3C0A /* TitleComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8429CA5D2A34610000BA3C0A /* TitleComponent.swift */; };
+		8429CA602A34618500BA3C0A /* CommonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8429CA5F2A34618500BA3C0A /* CommonView.swift */; };
+		8429CA622A34676400BA3C0A /* BasketCompoment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8429CA612A34676400BA3C0A /* BasketCompoment.swift */; };
+		8429CA642A35C9D400BA3C0A /* HomesScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8429CA632A35C9D400BA3C0A /* HomesScreenModel.swift */; };
+		8429CA682A35CA5C00BA3C0A /* MyPizza.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8429CA672A35CA5C00BA3C0A /* MyPizza.swift */; };
+		8429CA6A2A35CA7700BA3C0A /* HomeScreenPizzas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8429CA692A35CA7700BA3C0A /* HomeScreenPizzas.swift */; };
+		845A61912A35CF6600F6B0A2 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845A61902A35CF6600F6B0A2 /* Coordinator.swift */; };
+		845A61932A35CF8100F6B0A2 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845A61922A35CF8100F6B0A2 /* MainCoordinator.swift */; };
+		845A61952A360C1E00F6B0A2 /* UITableView+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845A61942A360C1E00F6B0A2 /* UITableView+extensions.swift */; };
+		845A61982A3612AD00F6B0A2 /* IngredientsScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845A61972A3612AD00F6B0A2 /* IngredientsScreenController.swift */; };
+		845A619C2A36601D00F6B0A2 /* IgredientsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845A619B2A36601D00F6B0A2 /* IgredientsTableViewCell.swift */; };
+		845A61A02A36621E00F6B0A2 /* IngredientsScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845A619F2A36621E00F6B0A2 /* IngredientsScreenModel.swift */; };
+		845A61A72A37221C00F6B0A2 /* CartScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845A61A62A37221C00F6B0A2 /* CartScreenController.swift */; };
+		845A61AA2A37251800F6B0A2 /* CartModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845A61A92A37251800F6B0A2 /* CartModel.swift */; };
+		845A61AF2A37291100F6B0A2 /* PizzaCartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845A61AE2A37291100F6B0A2 /* PizzaCartTableViewCell.swift */; };
+		845A61B12A372EF300F6B0A2 /* TotalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845A61B02A372EF300F6B0A2 /* TotalTableViewCell.swift */; };
+		845A61B42A37B07700F6B0A2 /* AddSuccessScreenScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845A61B32A37B07700F6B0A2 /* AddSuccessScreenScreenController.swift */; };
+		845A61B62A37B0E000F6B0A2 /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845A61B52A37B0E000F6B0A2 /* ActionButton.swift */; };
+		845A61B92A37B9BD00F6B0A2 /* CommonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845A61B82A37B9BD00F6B0A2 /* CommonViewController.swift */; };
+		845A61BB2A37BC0300F6B0A2 /* UIImage+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845A61BA2A37BC0300F6B0A2 /* UIImage+extension.swift */; };
+		845A61BD2A37BDCD00F6B0A2 /* CommonPizza.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845A61BC2A37BDCD00F6B0A2 /* CommonPizza.swift */; };
+		845A61BF2A37BDE600F6B0A2 /* Pizza.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845A61BE2A37BDE600F6B0A2 /* Pizza.swift */; };
+		845A61C12A37BE0500F6B0A2 /* CommonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845A61C02A37BE0500F6B0A2 /* CommonItem.swift */; };
+		845A61C32A37BE2F00F6B0A2 /* DrinkItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845A61C22A37BE2F00F6B0A2 /* DrinkItem.swift */; };
+		845A61C62A37C1ED00F6B0A2 /* IngrediensSelectItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845A61C52A37C1ED00F6B0A2 /* IngrediensSelectItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8429CA262A3390C400BA3C0A /* PizzaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PizzaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8429CA292A3390C400BA3C0A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8429CA2B2A3390C400BA3C0A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8429CA2D2A3390C400BA3C0A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		8429CA302A3390C400BA3C0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8429CA322A3390C600BA3C0A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		8429CA352A3390C600BA3C0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8429CA372A3390C600BA3C0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8429CA412A33948D00BA3C0A /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		8429CA4C2A339B3400BA3C0A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		8429CA4F2A33A95100BA3C0A /* IngredientItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientItem.swift; sourceTree = "<group>"; };
+		8429CA512A33AA9400BA3C0A /* Pizzas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pizzas.swift; sourceTree = "<group>"; };
+		8429CA532A33AC7600BA3C0A /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
+		8429CA552A33CD5100BA3C0A /* UIImageView+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+extension.swift"; sourceTree = "<group>"; };
+		8429CA582A34498600BA3C0A /* PizzaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaTableViewCell.swift; sourceTree = "<group>"; };
+		8429CA5A2A344C7500BA3C0A /* UIView+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+extensions.swift"; sourceTree = "<group>"; };
+		8429CA5D2A34610000BA3C0A /* TitleComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleComponent.swift; sourceTree = "<group>"; };
+		8429CA5F2A34618500BA3C0A /* CommonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonView.swift; sourceTree = "<group>"; };
+		8429CA612A34676400BA3C0A /* BasketCompoment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketCompoment.swift; sourceTree = "<group>"; };
+		8429CA632A35C9D400BA3C0A /* HomesScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomesScreenModel.swift; sourceTree = "<group>"; };
+		8429CA672A35CA5C00BA3C0A /* MyPizza.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPizza.swift; sourceTree = "<group>"; };
+		8429CA692A35CA7700BA3C0A /* HomeScreenPizzas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenPizzas.swift; sourceTree = "<group>"; };
+		845A61902A35CF6600F6B0A2 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		845A61922A35CF8100F6B0A2 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		845A61942A360C1E00F6B0A2 /* UITableView+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+extensions.swift"; sourceTree = "<group>"; };
+		845A61972A3612AD00F6B0A2 /* IngredientsScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsScreenController.swift; sourceTree = "<group>"; };
+		845A619B2A36601D00F6B0A2 /* IgredientsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IgredientsTableViewCell.swift; sourceTree = "<group>"; };
+		845A619F2A36621E00F6B0A2 /* IngredientsScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsScreenModel.swift; sourceTree = "<group>"; };
+		845A61A32A366D0A00F6B0A2 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		845A61A62A37221C00F6B0A2 /* CartScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartScreenController.swift; sourceTree = "<group>"; };
+		845A61A92A37251800F6B0A2 /* CartModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartModel.swift; sourceTree = "<group>"; };
+		845A61AE2A37291100F6B0A2 /* PizzaCartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaCartTableViewCell.swift; sourceTree = "<group>"; };
+		845A61B02A372EF300F6B0A2 /* TotalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalTableViewCell.swift; sourceTree = "<group>"; };
+		845A61B32A37B07700F6B0A2 /* AddSuccessScreenScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSuccessScreenScreenController.swift; sourceTree = "<group>"; };
+		845A61B52A37B0E000F6B0A2 /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
+		845A61B82A37B9BD00F6B0A2 /* CommonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonViewController.swift; sourceTree = "<group>"; };
+		845A61BA2A37BC0300F6B0A2 /* UIImage+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+extension.swift"; sourceTree = "<group>"; };
+		845A61BC2A37BDCD00F6B0A2 /* CommonPizza.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonPizza.swift; sourceTree = "<group>"; };
+		845A61BE2A37BDE600F6B0A2 /* Pizza.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pizza.swift; sourceTree = "<group>"; };
+		845A61C02A37BE0500F6B0A2 /* CommonItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonItem.swift; sourceTree = "<group>"; };
+		845A61C22A37BE2F00F6B0A2 /* DrinkItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkItem.swift; sourceTree = "<group>"; };
+		845A61C52A37C1ED00F6B0A2 /* IngrediensSelectItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngrediensSelectItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +117,206 @@
 		8429CA282A3390C400BA3C0A /* PizzaApp */ = {
 			isa = PBXGroup;
 			children = (
+				845A61A22A366CC400F6B0A2 /* BuildPhases */,
+				8429CA3E2A33923600BA3C0A /* Common */,
+				845A618F2A35CF5500F6B0A2 /* Coordinator */,
+				8429CA6B2A35CC3500BA3C0A /* Screens */,
 				8429CA292A3390C400BA3C0A /* AppDelegate.swift */,
 				8429CA2B2A3390C400BA3C0A /* SceneDelegate.swift */,
-				8429CA2D2A3390C400BA3C0A /* ViewController.swift */,
-				8429CA2F2A3390C400BA3C0A /* Main.storyboard */,
 				8429CA322A3390C600BA3C0A /* Assets.xcassets */,
-				8429CA342A3390C600BA3C0A /* LaunchScreen.storyboard */,
 				8429CA372A3390C600BA3C0A /* Info.plist */,
 			);
 			path = PizzaApp;
+			sourceTree = "<group>";
+		};
+		8429CA3D2A33922A00BA3C0A /* HomeScreen */ = {
+			isa = PBXGroup;
+			children = (
+				8429CA652A35CA2C00BA3C0A /* ScreenModel */,
+				8429CA572A34497200BA3C0A /* Cells */,
+				8429CA532A33AC7600BA3C0A /* HomeScreenViewController.swift */,
+			);
+			path = HomeScreen;
+			sourceTree = "<group>";
+		};
+		8429CA3E2A33923600BA3C0A /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				8429CA4C2A339B3400BA3C0A /* Constants.swift */,
+				845A61902A35CF6600F6B0A2 /* Coordinator.swift */,
+				845A61B82A37B9BD00F6B0A2 /* CommonViewController.swift */,
+				8429CA5F2A34618500BA3C0A /* CommonView.swift */,
+				8429CA5C2A3460EB00BA3C0A /* Components */,
+				8429CA482A3396C700BA3C0A /* Extensions */,
+				8429CA432A3395B600BA3C0A /* NetworkManager  */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		8429CA432A3395B600BA3C0A /* NetworkManager  */ = {
+			isa = PBXGroup;
+			children = (
+				8429CA4E2A33A90E00BA3C0A /* Models */,
+				8429CA412A33948D00BA3C0A /* NetworkManager.swift */,
+			);
+			path = "NetworkManager ";
+			sourceTree = "<group>";
+		};
+		8429CA482A3396C700BA3C0A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8429CA552A33CD5100BA3C0A /* UIImageView+extension.swift */,
+				845A61BA2A37BC0300F6B0A2 /* UIImage+extension.swift */,
+				8429CA5A2A344C7500BA3C0A /* UIView+extensions.swift */,
+				845A61942A360C1E00F6B0A2 /* UITableView+extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		8429CA4E2A33A90E00BA3C0A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				845A61BC2A37BDCD00F6B0A2 /* CommonPizza.swift */,
+				845A61C02A37BE0500F6B0A2 /* CommonItem.swift */,
+				8429CA4F2A33A95100BA3C0A /* IngredientItem.swift */,
+				845A61C22A37BE2F00F6B0A2 /* DrinkItem.swift */,
+				8429CA512A33AA9400BA3C0A /* Pizzas.swift */,
+				845A61BE2A37BDE600F6B0A2 /* Pizza.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8429CA572A34497200BA3C0A /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				8429CA582A34498600BA3C0A /* PizzaTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		8429CA5C2A3460EB00BA3C0A /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				8429CA5D2A34610000BA3C0A /* TitleComponent.swift */,
+				8429CA612A34676400BA3C0A /* BasketCompoment.swift */,
+				845A61B52A37B0E000F6B0A2 /* ActionButton.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		8429CA652A35CA2C00BA3C0A /* ScreenModel */ = {
+			isa = PBXGroup;
+			children = (
+				8429CA662A35CA3F00BA3C0A /* Items */,
+				8429CA632A35C9D400BA3C0A /* HomesScreenModel.swift */,
+			);
+			path = ScreenModel;
+			sourceTree = "<group>";
+		};
+		8429CA662A35CA3F00BA3C0A /* Items */ = {
+			isa = PBXGroup;
+			children = (
+				8429CA672A35CA5C00BA3C0A /* MyPizza.swift */,
+				8429CA692A35CA7700BA3C0A /* HomeScreenPizzas.swift */,
+			);
+			path = Items;
+			sourceTree = "<group>";
+		};
+		8429CA6B2A35CC3500BA3C0A /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				8429CA3D2A33922A00BA3C0A /* HomeScreen */,
+				845A61962A36126800F6B0A2 /* IngredientsScreen */,
+				845A61A52A371CF000F6B0A2 /* CartScreen */,
+				845A61B22A37B04300F6B0A2 /* AddSuccessScreen */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		845A618F2A35CF5500F6B0A2 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				845A61922A35CF8100F6B0A2 /* MainCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		845A61962A36126800F6B0A2 /* IngredientsScreen */ = {
+			isa = PBXGroup;
+			children = (
+				845A619E2A3661FC00F6B0A2 /* ScreenModel */,
+				845A619D2A36602200F6B0A2 /* Cells */,
+				845A61972A3612AD00F6B0A2 /* IngredientsScreenController.swift */,
+			);
+			path = IngredientsScreen;
+			sourceTree = "<group>";
+		};
+		845A619D2A36602200F6B0A2 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				845A619B2A36601D00F6B0A2 /* IgredientsTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		845A619E2A3661FC00F6B0A2 /* ScreenModel */ = {
+			isa = PBXGroup;
+			children = (
+				845A61C42A37C1CF00F6B0A2 /* Items */,
+				845A619F2A36621E00F6B0A2 /* IngredientsScreenModel.swift */,
+			);
+			path = ScreenModel;
+			sourceTree = "<group>";
+		};
+		845A61A22A366CC400F6B0A2 /* BuildPhases */ = {
+			isa = PBXGroup;
+			children = (
+				845A61A32A366D0A00F6B0A2 /* .swiftlint.yml */,
+			);
+			path = BuildPhases;
+			sourceTree = "<group>";
+		};
+		845A61A52A371CF000F6B0A2 /* CartScreen */ = {
+			isa = PBXGroup;
+			children = (
+				845A61A82A3724D900F6B0A2 /* ScreenModel */,
+				845A61AD2A3728E400F6B0A2 /* Cells */,
+				845A61A62A37221C00F6B0A2 /* CartScreenController.swift */,
+			);
+			path = CartScreen;
+			sourceTree = "<group>";
+		};
+		845A61A82A3724D900F6B0A2 /* ScreenModel */ = {
+			isa = PBXGroup;
+			children = (
+				845A61A92A37251800F6B0A2 /* CartModel.swift */,
+			);
+			path = ScreenModel;
+			sourceTree = "<group>";
+		};
+		845A61AD2A3728E400F6B0A2 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				845A61AE2A37291100F6B0A2 /* PizzaCartTableViewCell.swift */,
+				845A61B02A372EF300F6B0A2 /* TotalTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		845A61B22A37B04300F6B0A2 /* AddSuccessScreen */ = {
+			isa = PBXGroup;
+			children = (
+				845A61B32A37B07700F6B0A2 /* AddSuccessScreenScreenController.swift */,
+			);
+			path = AddSuccessScreen;
+			sourceTree = "<group>";
+		};
+		845A61C42A37C1CF00F6B0A2 /* Items */ = {
+			isa = PBXGroup;
+			children = (
+				845A61C52A37C1ED00F6B0A2 /* IngrediensSelectItem.swift */,
+			);
+			path = Items;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,6 +329,7 @@
 				8429CA222A3390C400BA3C0A /* Sources */,
 				8429CA232A3390C400BA3C0A /* Frameworks */,
 				8429CA242A3390C400BA3C0A /* Resources */,
+				845A61A12A366C4000F6B0A2 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -125,45 +378,78 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8429CA362A3390C600BA3C0A /* LaunchScreen.storyboard in Resources */,
 				8429CA332A3390C600BA3C0A /* Assets.xcassets in Resources */,
-				8429CA312A3390C400BA3C0A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		845A61A12A366C4000F6B0A2 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ -z `echo \"$PATH\"|grep \"/usr/local/bin\"` ]; then\n  export PATH=\"/usr/local/bin:$PATH\"\nfi\n\nif which swiftlint >/dev/null; then\n  swiftlint lint --quiet $@\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8429CA222A3390C400BA3C0A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8429CA2E2A3390C400BA3C0A /* ViewController.swift in Sources */,
+				845A61B62A37B0E000F6B0A2 /* ActionButton.swift in Sources */,
+				8429CA562A33CD5100BA3C0A /* UIImageView+extension.swift in Sources */,
+				8429CA622A34676400BA3C0A /* BasketCompoment.swift in Sources */,
+				845A61C32A37BE2F00F6B0A2 /* DrinkItem.swift in Sources */,
+				8429CA6A2A35CA7700BA3C0A /* HomeScreenPizzas.swift in Sources */,
+				845A61C12A37BE0500F6B0A2 /* CommonItem.swift in Sources */,
+				8429CA542A33AC7600BA3C0A /* HomeScreenViewController.swift in Sources */,
 				8429CA2A2A3390C400BA3C0A /* AppDelegate.swift in Sources */,
+				845A61AA2A37251800F6B0A2 /* CartModel.swift in Sources */,
+				8429CA642A35C9D400BA3C0A /* HomesScreenModel.swift in Sources */,
+				845A61952A360C1E00F6B0A2 /* UITableView+extensions.swift in Sources */,
+				8429CA422A33948D00BA3C0A /* NetworkManager.swift in Sources */,
+				845A61B12A372EF300F6B0A2 /* TotalTableViewCell.swift in Sources */,
+				845A61B92A37B9BD00F6B0A2 /* CommonViewController.swift in Sources */,
+				845A61912A35CF6600F6B0A2 /* Coordinator.swift in Sources */,
+				8429CA682A35CA5C00BA3C0A /* MyPizza.swift in Sources */,
+				845A61AF2A37291100F6B0A2 /* PizzaCartTableViewCell.swift in Sources */,
+				845A61BB2A37BC0300F6B0A2 /* UIImage+extension.swift in Sources */,
 				8429CA2C2A3390C400BA3C0A /* SceneDelegate.swift in Sources */,
+				8429CA4D2A339B3400BA3C0A /* Constants.swift in Sources */,
+				845A61C62A37C1ED00F6B0A2 /* IngrediensSelectItem.swift in Sources */,
+				845A619C2A36601D00F6B0A2 /* IgredientsTableViewCell.swift in Sources */,
+				8429CA502A33A95100BA3C0A /* IngredientItem.swift in Sources */,
+				845A61BF2A37BDE600F6B0A2 /* Pizza.swift in Sources */,
+				8429CA5E2A34610000BA3C0A /* TitleComponent.swift in Sources */,
+				845A61932A35CF8100F6B0A2 /* MainCoordinator.swift in Sources */,
+				8429CA592A34498600BA3C0A /* PizzaTableViewCell.swift in Sources */,
+				8429CA602A34618500BA3C0A /* CommonView.swift in Sources */,
+				845A61A72A37221C00F6B0A2 /* CartScreenController.swift in Sources */,
+				8429CA522A33AA9400BA3C0A /* Pizzas.swift in Sources */,
+				845A61B42A37B07700F6B0A2 /* AddSuccessScreenScreenController.swift in Sources */,
+				845A61982A3612AD00F6B0A2 /* IngredientsScreenController.swift in Sources */,
+				845A61A02A36621E00F6B0A2 /* IngredientsScreenModel.swift in Sources */,
+				8429CA5B2A344C7500BA3C0A /* UIView+extensions.swift in Sources */,
+				845A61BD2A37BDCD00F6B0A2 /* CommonPizza.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		8429CA2F2A3390C400BA3C0A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8429CA302A3390C400BA3C0A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		8429CA342A3390C600BA3C0A /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8429CA352A3390C600BA3C0A /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		8429CA382A3390C600BA3C0A /* Debug */ = {
@@ -291,8 +577,8 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PizzaApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UILaunchStoryboardName = "";
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -319,8 +605,8 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PizzaApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UILaunchStoryboardName = "";
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
