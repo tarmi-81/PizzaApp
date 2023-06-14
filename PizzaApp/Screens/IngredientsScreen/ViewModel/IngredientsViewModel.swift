@@ -1,5 +1,5 @@
 //
-//  IngredientsScreenModel.swift
+//  IngredientsViewModel.swift
 //  PizzaApp
 //
 //  Created by Jozef Gmuca on 11/06/2023.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-class IngredientsScreenModel {
+final class IngredientsViewModel {
     var pizzaData: MyPizza?
     var ingrediensData: [IngrediensSelectItem]?
     init(pizza: MyPizza, ingredients: [IngredientItem]) {

@@ -21,28 +21,44 @@ class MainCoordinator: Coordinator {
         navigationController.pushViewController(homeScreen, animated: false)
     }
     func addPizza(pizza: MyPizza, ingredients: [IngredientItem]) {
-        let ingredientsScreen = IngredientsController()
+        let ingredientsScreen = IngredientsViewController()
         ingredientsScreen.coordinator = self
-        ingredientsScreen.screenModel = IngredientsScreenModel(pizza: pizza, ingredients: ingredients)
+        ingredientsScreen.viewModel = IngredientsViewModel(pizza: pizza, ingredients: ingredients)
         navigationController.pushViewController(ingredientsScreen, animated: false)
     }
     func closeViewConntroller() {
         navigationController.popViewController(animated: false)
     }
     func openBasket() {
-        let cartScreen = CartScreenController()
+        let cartScreen = CartViewController()
         cartScreen.coordinator = self
-        cartScreen.screenModel = CartModel.shared
+        cartScreen.viewModel = CartViewModel.shared
         navigationController.pushViewController(cartScreen, animated: false)
     }
     func addToCart(pizza: MyPizza) {
-        CartModel.shared.addPizza(pizza: pizza)
+        CartViewModel.shared.addPizza(pizza: pizza)
         navigationController.popViewController(animated: false)
 
-        let addSuccessViewController = AddSuccessScreenScreenController()
+        let addSuccessViewController = AddSuccessViewController()
         addSuccessViewController.coordinator = self
         navigationController.pushViewController(addSuccessViewController, animated: false)
     }
-    func openDrinks() {
+    func addToCart(drink: DrinkItem) {
+        CartViewModel.shared.addDrink(drink: drink)
+        if let cartViewControler = navigationController.popViewController(animated: false) as? CartViewController {
+            cartViewControler.viewDidAppear(false)
+        }
     }
+    func openDrinks() {
+        let drinksScreen = DrinksViewController()
+        drinksScreen.coordinator = self
+        navigationController.pushViewController(drinksScreen, animated: true)
+    }
+    func checkOut() {
+        navigationController.popViewController(animated: false)
+        let checkOutScreen = CheckOutViewController()
+        checkOutScreen.coordinator = self
+        navigationController.pushViewController(checkOutScreen, animated: false)
+    }
+
 }

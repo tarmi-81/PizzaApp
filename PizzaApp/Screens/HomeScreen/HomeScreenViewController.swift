@@ -10,7 +10,7 @@ import UIKit
 
 class HomeScreenViewController: UIViewController, UITableViewDelegate {
     var coordinator: Coordinator?
-    private var screenModel: HomesScreenModel = HomesScreenModel()
+    private var viewModel: HomesScreenViewModel = HomesScreenViewModel()
     private lazy var tableView: UITableView =  {
         let table = UITableView()
         table.delegate = self
@@ -38,7 +38,7 @@ class HomeScreenViewController: UIViewController, UITableViewDelegate {
     }()
     public override func viewDidLoad() {
         super.viewDidLoad()
-        screenModel.loadData {
+        viewModel.loadData {
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
@@ -54,14 +54,14 @@ class HomeScreenViewController: UIViewController, UITableViewDelegate {
         }
     }
     @objc fileprivate func createCustomPizza() {
-        guard let ingrediensData = screenModel.ingrediensData else { return }
+        guard let ingrediensData = viewModel.ingrediensData else { return }
         let myPizza = MyPizza(name: "CREATE A PIZZA",
                               ingredients: [],
                               imageUrl: nil,
-                              defaultPrice: screenModel.defaultPrice,
+                              defaultPrice: viewModel.defaultPrice,
                               ingredientsText: [],
                               customIngredients: [],
-                              customPrice: screenModel.defaultPrice)
+                              customPrice: viewModel.defaultPrice)
 
             createPizza(pizza: myPizza,
                         ingredients: ingrediensData)
@@ -92,12 +92,12 @@ extension HomeScreenViewController: CommonViewController {
 }
 extension HomeScreenViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard let pizzasData = screenModel.pizzasData else { return 0}
+        guard let pizzasData = viewModel.pizzasData else { return 0}
         return pizzasData.pizzas.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let pizzasData = screenModel.pizzasData,
-              let ingredients = screenModel.ingrediensData else { return UITableViewCell() }
+        guard let pizzasData = viewModel.pizzasData,
+              let ingredients = viewModel.ingrediensData else { return UITableViewCell() }
 
         let cell: PizzaTableViewCell = tableView.dequeueCell(for: indexPath)
         let pizzaItem = pizzasData.pizzas[indexPath.row]

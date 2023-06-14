@@ -6,8 +6,8 @@
 //
 
 import Foundation
-class CartModel {
-    static let shared = CartModel()
+final class CartViewModel {
+    static let shared = CartViewModel()
     var pizzas: [MyPizza] = [] {
         didSet {
             updatePrice()
@@ -32,8 +32,8 @@ class CartModel {
             pizzas.remove(at: itemIndex)
         }
     }
-    public func removePizza(pizza: DrinkItem) {
-        if let itemIndex = drinks.firstIndex(where: { $0.id == pizza.id }) {
+    public func removeDrink(drink: DrinkItem) {
+        if let itemIndex = drinks.firstIndex(where: { $0.id == drink.id }) {
             drinks.remove(at: itemIndex)
         }
     }

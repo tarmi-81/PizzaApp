@@ -1,5 +1,5 @@
 //
-//  IngredientsController.swift
+//  IngredientsViewController.swift
 //  PizzaApp
 //
 //  Created by Jozef Gmuca on 11/06/2023.
@@ -8,9 +8,9 @@
 import Foundation
 import UIKit
 
-class IngredientsController: UIViewController, UITableViewDelegate {
+final class IngredientsViewController: UIViewController, UITableViewDelegate {
     var coordinator: Coordinator?
-    var screenModel: IngredientsScreenModel?
+    var viewModel: IngredientsViewModel?
 
     private lazy var imageBg: UIImageView = {
         let image = UIImageView()
@@ -59,20 +59,20 @@ class IngredientsController: UIViewController, UITableViewDelegate {
         setUpContent()
     }
     private func currentPrice() -> String {
-        guard let customPrice = screenModel?.pizzaData?.customPrice  else { return "-" }
+        guard let customPrice = viewModel?.pizzaData?.customPrice  else { return "-" }
         return "ADD TO CARD ($" + String(format: "%.2f", customPrice) + ")"
     }
 }
-extension IngredientsController: CommonViewController {
+extension IngredientsViewController: CommonViewController {
     internal func setUpContent() {
-        if let imageUrl = screenModel?.pizzaData?.imageUrl {
+        if let imageUrl = viewModel?.pizzaData?.imageUrl {
             pizzaImage.downloaded(from: imageUrl)
         }
         tableTitle.text = "Ingredients"
         addButton.text = currentPrice()
         addButton.tapAction = { [self] in
             if let mainCoordinator = coordinator as? MainCoordinator,
-               let pizza = screenModel?.pizzaData {
+               let pizza = viewModel?.pizzaData {
                 mainCoordinator.addToCart(pizza: pizza)
             }
         }
@@ -95,7 +95,7 @@ extension IngredientsController: CommonViewController {
         tableView.pinHorizontalSidesToContainer()
     }
     internal func setUpNavigationBar() {
-        title = screenModel?.pizzaData?.name
+        title = viewModel?.pizzaData?.name
         self.navigationController?.navigationBar.backItem?.title = " "
         coordinator?.navigationController.navigationBar.tintColor  = Constants.Color.red
         coordinator?.navigationController.navigationBar.titleTextAttributes = [
@@ -104,19 +104,19 @@ extension IngredientsController: CommonViewController {
         ]
     }
 }
-extension IngredientsController: UITableViewDataSource {
+extension IngredientsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard let ingredients = screenModel?.ingrediensData else { return 0 }
+        guard let ingredients = viewModel?.ingrediensData else { return 0 }
         return ingredients.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let ingredients = screenModel?.ingrediensData else { return UITableViewCell()}
+        guard let ingredients = viewModel?.ingrediensData else { return UITableViewCell()}
 
         let cell: IgredientsTableViewCell = tableView.dequeueCell(for: indexPath)
         let ingredient = ingredients[indexPath.row]
         cell.ingredient = ingredient
         cell.tapAction = { [self] in
-            screenModel?.checkItem(item: ingredient) { [self] in
+            viewModel?.checkItem(item: ingredient) { [self] in
                 tableView.beginUpdates()
                 tableView.reloadRows(at: [indexPath], with: .fade)
                 tableView.endUpdates()

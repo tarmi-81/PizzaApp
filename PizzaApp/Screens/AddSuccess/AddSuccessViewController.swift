@@ -7,12 +7,11 @@
 
 import Foundation
 import UIKit
-class AddSuccessScreenScreenController: UIViewController {
+
+final class AddSuccessViewController: UIViewController {
     var coordinator: Coordinator?
-    var screenModel: CartModel?
     private lazy var addSuccessLabel: ActionButton = {
         let view = ActionButton()
-
         return view
     }()
     public override func viewDidLoad() {
@@ -29,9 +28,8 @@ class AddSuccessScreenScreenController: UIViewController {
             }
         }
     }
-
 }
-extension AddSuccessScreenScreenController: CommonViewController {
+extension AddSuccessViewController: CommonViewController {
     internal func setUpContent() {
         addSuccessLabel.text = "ADDED TO CART"
     }

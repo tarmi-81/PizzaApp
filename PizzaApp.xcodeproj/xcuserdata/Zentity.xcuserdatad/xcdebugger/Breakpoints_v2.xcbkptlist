@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "2075D668-CEE3-418B-A818-FE8FBF27061C"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A15D7F8A-D561-4E2D-8E94-A7FEFB0C52A1"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PizzaApp/Coordinator/MainCoordinator.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "addToCart(drink:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8D40C08A-73A3-46FF-B740-C213F8BAFF3A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PizzaApp/Coordinator/MainCoordinator.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "addToCart(drink:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "8D40C08A-73A3-46FF-B740-C213F8BAFF3A - a0a37110195b7807"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PizzaApp.MainCoordinator.addToCart(drink: PizzaApp.Item) -&gt; ()"
+                  moduleName = "PizzaApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Zentity/Projects/PizzaApp/PizzaApp/PizzaApp/Coordinator/MainCoordinator.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "136">
+               </Location>
+               <Location
+                  uuid = "8D40C08A-73A3-46FF-B740-C213F8BAFF3A - a0a37110195b7807"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PizzaApp.MainCoordinator.addToCart(drink: PizzaApp.Item) -&gt; ()"
+                  moduleName = "PizzaApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Zentity/Projects/PizzaApp/PizzaApp/PizzaApp/Coordinator/MainCoordinator.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "364">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

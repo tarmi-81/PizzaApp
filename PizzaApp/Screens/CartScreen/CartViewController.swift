@@ -1,5 +1,5 @@
 //
-//  CartScreenController.swift
+//  CartViewController.swift
 //  PizzaApp
 //
 //  Created by Jozef Gmuca on 12/06/2023.
@@ -8,10 +8,10 @@
 import Foundation
 import UIKit
 
-class CartScreenController: UIViewController, UITableViewDelegate {
+final class CartViewController: UIViewController, UITableViewDelegate {
     var coordinator: Coordinator?
-    var screenModel: CartModel?
-    private lazy var checkOutbutton: ActionButton = {
+    var viewModel: CartViewModel?
+    private lazy var checkOutButton: ActionButton = {
         let view = ActionButton()
         return view
     }()
@@ -38,34 +38,54 @@ class CartScreenController: UIViewController, UITableViewDelegate {
         super.viewDidLoad()
         view.backgroundColor = Constants.Color.white
         view.addSubview(tableView)
-        view.addSubview(checkOutbutton)
+        view.addSubview(checkOutButton)
         setUpNavigationBar()
         setUpContstrains()
         setUpContent()
+    }
+    public override func viewDidAppear(_ animated: Bool) {
+        updateButton()
+        tableView.reloadData()
     }
     @objc fileprivate func openDrinks() {
         if let mainCoordinator = coordinator as? MainCoordinator {
             mainCoordinator.openDrinks()
         }
     }
+    func updateButton() {
+        guard let screenModel = viewModel else {
+            checkOutButton.layer.opacity = 0.8
+            checkOutButton.isUserInteractionEnabled = false
+            return
+        }
+        if screenModel.pizzas.isEmpty && screenModel.drinks.isEmpty {
+            checkOutButton.layer.opacity = 0.8
+            checkOutButton.isUserInteractionEnabled = false
+        } else {
+            checkOutButton.layer.opacity = 1
+            checkOutButton.isUserInteractionEnabled = true
+        }
+    }
 }
-extension CartScreenController: CommonViewController {
+extension CartViewController: CommonViewController {
     internal func setUpContent() {
-        checkOutbutton.text = "CHECKOUT"
-        checkOutbutton.tapAction = {
-            // TODO: checkOut
+        updateButton()
+        checkOutButton.text = "CHECKOUT"
+        checkOutButton.tapAction = { [self] in
+            if let mainCoordinator = coordinator as? MainCoordinator {
+                mainCoordinator.checkOut()
+            }
         }
     }
     internal func setUpContstrains() {
         tableView.topAnchor(equalTo: view.safeAreaLayoutGuide.topAnchor,
                             padding: Constants.Pading.regularPadding)
-        tableView.bottomAnchor(equalTo: checkOutbutton.topAnchor)
+        tableView.bottomAnchor(equalTo: checkOutButton.topAnchor)
         tableView.pinHorizontalSidesToContainer()
-        checkOutbutton.pinHorizontalSidesToContainer()
-        checkOutbutton.bottomAnchor(equalTo: view.bottomAnchor)
-        checkOutbutton.heightAnchor(equalTo: 85.0)
+        checkOutButton.pinHorizontalSidesToContainer()
+        checkOutButton.bottomAnchor(equalTo: view.bottomAnchor)
+        checkOutButton.heightAnchor(equalTo: 85.0)
     }
-
     internal func setUpNavigationBar() {
         title = "CART"
         navigationItem.rightBarButtonItem = rightNavButton
@@ -77,14 +97,15 @@ extension CartScreenController: CommonViewController {
         ]
     }
 }
-extension CartScreenController: UITableViewDataSource {
+extension CartViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard let pizzas = screenModel?.pizzas else { return 0 }
-        return pizzas.count + 1
+        guard let pizzas = viewModel?.pizzas,
+              let drinks = viewModel?.drinks else { return 1 }
+        return pizzas.count + drinks.count + 1
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let pizzas = screenModel?.pizzas,
-              let drinks = screenModel?.drinks else { return UITableViewCell()}
+        guard let pizzas = viewModel?.pizzas,
+              let drinks = viewModel?.drinks else { return UITableViewCell()}
         let totalPriceIndexPath = IndexPath(row: (pizzas.count + drinks.count), section: 0)
         switch indexPath.row {
         case ..<pizzas.count:
@@ -92,13 +113,25 @@ extension CartScreenController: UITableViewDataSource {
             let myPizza = pizzas[indexPath.row]
             cell.pizza = myPizza
             cell.tapAction = { [self] in
-                screenModel?.removePizza(pizza: myPizza)
+                viewModel?.removePizza(pizza: myPizza)
                 tableView.reloadData()
+                updateButton()
+            }
+            return cell
+        case pizzas.count..<drinks.count:
+            let cell: DrinkCartTableViewCell = tableView.dequeueCell(for: indexPath)
+            let index = indexPath.row - pizzas.count
+            let drink = drinks[index]
+            cell.drink = drink
+            cell.tapAction = { [self] in
+                viewModel?.removeDrink(drink: drink)
+                tableView.reloadData()
+                updateButton()
             }
             return cell
         case totalPriceIndexPath.row:
             let cell: TotalTableViewCell = tableView.dequeueCell(for: indexPath)
-            cell.priceValue = screenModel?.totalPrice
+            cell.priceValue = viewModel?.totalPrice
             return cell
         default:
             return UITableViewCell()

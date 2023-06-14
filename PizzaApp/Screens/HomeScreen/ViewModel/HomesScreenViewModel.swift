@@ -1,5 +1,5 @@
 //
-//  HomesScreenModel.swift
+//  HomesScreenViewModel.swift
 //  PizzaApp
 //
 //  Created by Jozef Gmuca on 11/06/2023.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-class HomesScreenModel {
+final class HomesScreenViewModel {
     private var apiPizzasData: Pizzas?
     var pizzasData: HomeScreenPizzas?
     var ingrediensData: [IngredientItem]?
