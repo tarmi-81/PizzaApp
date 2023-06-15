@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 final class IgredientsTableViewCell: UITableViewCell {
-    var ingredient: IngrediensSelectItem? {
+    var ingredient: IngredientsSelectItem? {
         didSet {
             update()
         }

@@ -9,15 +9,15 @@ import Foundation
 
 final class IngredientsViewModel {
     var pizzaData: MyPizza?
-    var ingrediensData: [IngrediensSelectItem]?
+    var ingrediensData: [IngredientsSelectItem]?
     init(pizza: MyPizza, ingredients: [IngredientItem]) {
         self.pizzaData = pizza
         self.ingrediensData = ingredients.map({ item in
             let isSelected = pizzaData?.customIngredients.first(where: { $0 == item.id }) != nil ? true : false
-            return  IngrediensSelectItem(id: item.id, name: item.name, price: item.price, isSelected: isSelected )
+            return  IngredientsSelectItem(id: item.id, name: item.name, price: item.price, isSelected: isSelected )
         })
     }
-    public func checkItem(item: IngrediensSelectItem, completion: @escaping () -> Void ) {
+    public func checkItem(item: IngredientsSelectItem, completion: @escaping () -> Void ) {
         guard var pizza = pizzaData else { return }
         if let itemIndex = pizza.customIngredients.firstIndex(where: { $0 == item.id }) {
             pizzaData?.customIngredients.remove(at: itemIndex)

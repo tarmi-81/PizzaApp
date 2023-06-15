@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct IngrediensSelectItem: CommonItem {
+struct IngredientsSelectItem: CommonItem {
     var id: Int64
     var name: String
     var price: Double
