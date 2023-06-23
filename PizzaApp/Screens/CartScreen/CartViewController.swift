@@ -107,8 +107,8 @@ extension CartViewController: UITableViewDataSource {
         guard let pizzas = viewModel?.pizzas,
               let drinks = viewModel?.drinks else { return UITableViewCell()}
         let totalPriceIndexPath = IndexPath(row: (pizzas.count + drinks.count), section: 0)
-        switch indexPath.row {
-        case ..<pizzas.count:
+        let indexOfElement = indexPath.row
+        if   indexOfElement < pizzas.count {
             let cell: PizzaCartTableViewCell = tableView.dequeueCell(for: indexPath)
             let myPizza = pizzas[indexPath.row]
             cell.pizza = myPizza
@@ -118,7 +118,7 @@ extension CartViewController: UITableViewDataSource {
                 updateButton()
             }
             return cell
-        case pizzas.count..<drinks.count:
+        } else if indexOfElement  >= pizzas.count && indexOfElement < totalPriceIndexPath.row {
             let cell: DrinkCartTableViewCell = tableView.dequeueCell(for: indexPath)
             let index = indexPath.row - pizzas.count
             let drink = drinks[index]
@@ -129,11 +129,11 @@ extension CartViewController: UITableViewDataSource {
                 updateButton()
             }
             return cell
-        case totalPriceIndexPath.row:
+        } else if indexOfElement ==  totalPriceIndexPath.row {
             let cell: TotalTableViewCell = tableView.dequeueCell(for: indexPath)
             cell.priceValue = viewModel?.totalPrice
             return cell
-        default:
+        } else {
             return UITableViewCell()
         }
     }
